@@ -10,7 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ict.model.guestbook2.Command;
+import com.ict.model.guestbook2.DetailCommand;
 import com.ict.model.guestbook2.ListCommand;
+import com.ict.model.guestbook2.WriteCommand;
+import com.ict.model.guestbook2.WriteOkCommand;
 
 
 @WebServlet("/GuestBook2")
@@ -27,11 +30,14 @@ public class GuestBook2 extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		String cmd = request.getParameter("cmd");
-		
+		System.out.println(cmd);
 		Command comm = null;
 		
 		switch (cmd) {
 		case "list": comm = new ListCommand(); break;
+		case "write": comm = new WriteCommand(); break;
+		case "write_ok": comm = new WriteOkCommand(); break;
+		case "detail": comm = new DetailCommand(); break;
 			
 		}
 		

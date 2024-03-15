@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>방명록 목록</title>
+<title>방명록2 목록</title>
 <style type="text/css">
 	a { text-decoration: none;}
 	table{width: 600px; border-collapse:collapse; text-align: center;}
@@ -15,9 +15,9 @@
 </head>
 <body>
 <div>
-	<h2>방명록</h2>
+	<h2>방명록2</h2>
 	<hr>
-	<p>[<a href="${pageContext.request.contextPath}/GuestBook?cmd=write">방명록 쓰기</a>]</p>
+	<p>[<a href="${pageContext.request.contextPath}/GuestBook2?cmd=write">방명록 쓰기</a>]</p>
 	<table>
 	<thead>
 	<tr style="background-color: #99ccff"><th>번호</th><th>작성자</th><th>제목</th><th>작성일</th></tr>
@@ -32,7 +32,7 @@
 				<tr>
 					<td>${k.idx}</td>
 					<td>${k.name}</td>
-					<td>[<a href="${pageContext.request.contextPath}/GuestBook?cmd=detail&idx=${k.idx}">${k.subject}</a>]</td>
+					<td>[<a href="${pageContext.request.contextPath}/GuestBook2?cmd=detail&idx=${k.idx}">${k.subject}</a>]</td>
 					<td>${k.regdate}</td>
 				</tr>
 			</c:forEach>

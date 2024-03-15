@@ -4,12 +4,12 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>방명록</title>
+		<title>방명록2</title>
 	</head>
 	<body>
 		<form action="${pageContext.request.contextPath}/GuestBook2" method="post">
 			<input type="hidden" name="cmd" value="list">
-			<input type="submit" value="방명록">
+			<input type="submit" value="방명록2">
 		</form>
 	</body>
 </html>
